@@ -33,6 +33,6 @@ while 1:
                 else:
                     ipinv[iy,ix] = 1
 
-        disp.image(Image.fromarray(ipinv))
+        disp.image(Image.fromarray(ipinv).convert("1"))
         disp.display()
         time.sleep(1)
