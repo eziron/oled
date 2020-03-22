@@ -1,12 +1,9 @@
 import time
-from board import SCL, SDA
-import busio
 from PIL import Image
-import adafruit_ssd1306
+import Adafruit_SSD1306
 import numpy as np
 
-i2c = busio.I2C(SCL, SDA)
-disp = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
+disp = Adafruit_SSD1306.SSD1306_128_32(rst=None, i2c_bus=1, gpio=1)
 
 disp.fill(0)
 disp.show()
@@ -15,8 +12,8 @@ imIN = Image.open("GIFlove.gif")
 
 
 f = 0.4
-fy = int(im.size[0] * f)
-fx = int(im.size[1] * f)
+fy = int(imIN.size[0] * f)
+fx = int(imIN.size[1] * f)
 
 y = 36
 x = 21
