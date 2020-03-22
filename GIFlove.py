@@ -21,7 +21,7 @@ fx = int(imIN.size[1] * f)
 y = 36
 x = 21
 
-while 1:
+while True:
     for i in range(imIN.n_frames):
         imIN.seek(i)
         ip = np.asarray(imIN.resize((fy,fx)))[y:y+32,x:x+128]
