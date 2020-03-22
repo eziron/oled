@@ -1,4 +1,5 @@
 import time
+import PIL
 from PIL import Image
 import Adafruit_SSD1306
 import numpy as np
